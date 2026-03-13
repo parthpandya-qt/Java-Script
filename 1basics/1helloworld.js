@@ -3,6 +3,10 @@ console.log("Parth Pandya")
 /*
 1. JavaScript
 
+synchronous
+
+single threaded
+
 JavaScript is a high-level, interpreted scripting language.
 
 Mainly used for web development.

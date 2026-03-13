@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>HTML Events</title>
+</head>
+
+<body>
+
+<h2>Amazing images</h2>
+
+<div>
+    <ul id="images">
+
+        <li>
+            <img width="200px"
+            id="photoshop"
+            src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg"
+            alt="photoshop">
+        </li>
+
+        <li>
+            <img width="200px"
+            id="japan"
+            src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg"
+            alt="">
+        </li>
+
+        <li>
+            <img width="200px"
+            id="river"
+            src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg"
+            alt="">
+        </li>
+
+        <li>
+            <img width="200px"
+            id="owl"
+            src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg"
+            alt="">
+        </li>
+
+    </ul>
+</div>
+
+</body>
+<script>
+    
+
+
+
+    // document.getElementById('owl').addEventListener('click',function(e){ console.log("only owl"), e.stopPropagation() },false)  // returns the object property of e  
+    // // e.stopPropagation()  this thill stop the propagation 
+    
+    
+    // //The third argument of addEventListener controls event propagation mode.
+    // //false	Event uses event bubbling (default)     Event travels from child → parent → document
+    // //true	Event uses event capturing      Event travels from parent → child.
+    
+    // document.getElementById('images').addEventListener('click',function(e){ console.log("whole the images") },false)    // is the event propagation made is truew than this will be consoled first than the upper one or if it is false than the upper one will be consoled than this one
+
+
+
+
+    // document.addEventListener('keydown',function(e){ console.log(e.key) })
+    
+    //type,toElement,srcElement,currentTarget
+    //clentX,clientT,screenX,screenY
+    //altket, ctrlkey , key
+    
+
+    document.querySelector('#images').addEventListener('click',function(e){
+        console.log(e.target.parentNode)
+        const value = e.target.parentNode
+        if (e.target.tagName==='IMG') {
+            value.remove()
+        }
+        
+
+    })
+
+</script>
+</html>

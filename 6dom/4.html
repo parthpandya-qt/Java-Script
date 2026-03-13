@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parth Pandya</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(langName){
+            const li = document.createElement('li')
+            li.innerText = `${langName}`
+            document.querySelector('.language').appendChild(li)
+    }
+    addLanguage("python")
+    addLanguage("Ruby")
+    addLanguage("Java")
+
+    function optimisedWaytoadd(langName){
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+    }
+    optimisedWaytoadd("golang")
+
+
+    //edit
+    const secondItem = document.querySelector("ul li:nth-child(2)");
+    console.log(secondItem.innerText);
+    //secondItem.innerText = "C++"
+
+    const newLi = document.createElement("li")  //new element is made and replaced with it
+    newLi.textContent="C"
+    secondItem.replaceWith(newLi)
+
+    //edit
+    const firstLang = document.querySelector("ul li:first-child")
+    firstLang.outerHTML = "<li>TypeScript</li>"
+
+    //remove 
+    const lastChild = document.querySelector("ul li:last-child")
+    lastChild.remove()
+</script>
+</html>

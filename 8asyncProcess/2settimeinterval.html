@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Parth Pandya</h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+</body>
+<script>
+
+    let start
+    const work = function(name){
+        console.log(`${name} is ideot.`)
+    }
+    
+    document.querySelector('#start').addEventListener('click',function(e){
+        start = setInterval(work,1000,"Parth")
+    },false)
+    
+    document.querySelector('#stop').addEventListener('click',function(e){
+        clearInterval(start)
+    },false)
+
+</script>
+</html>

@@ -25,3 +25,7 @@ let score2=20
 let score3=30
 let score4=40
 console.log(Array.of(score1,score2,score3,score4))
+
+
+
+//Array.from(anyIterable)   this is used to convert any iterable to array
