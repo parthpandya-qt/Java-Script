@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #313131; color:#fff;">
+    <button id="first">first</button>
+    <button id="second">second</button>
+</body>
+<script>
+    function changeBackgroundcolor(color){
+        function changeBackgroundcolor2(){
+            document.body.style.backgroundColor=color
+        }
+        return changeBackgroundcolor2
+        
+    }
+    document.getElementById('first').onclick = changeBackgroundcolor("blue")     //using closure
+    document.getElementById('second').onclick = changeBackgroundcolor("yellow")   //using closure
+    
+</script>
+</html>
